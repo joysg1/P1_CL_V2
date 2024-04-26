@@ -169,88 +169,89 @@
         Label9.Text = "Código de Gray equivalente: " & gray
     End Sub
 
+    
+    
 
-    Private Function EsBinarioDe6Bits(ByVal valor As String) As Boolean
-        If valor.Length > 6 Then
-            Return False
+
+
+
+
+
+
+
+    
+
+    Private Function IsValidBinary(ByVal binary As String) As Boolean
+        ' Verificar si la cadena es un número binario válido de máximo 10 bits y no es cero
+        If Not (binary.All(Function(c) c = "0" Or c = "1") AndAlso binary.Length > 0 AndAlso binary.Length <= 10) Then
+            Return False ' No es válido
         End If
 
-        For Each caracter As Char In valor
-            If Not (caracter = "0" Or caracter = "1") Then
-                Return False
-            End If
-        Next
-        Return True
+        Return True ' Es válido
     End Function
 
-    Private Function XorBit(ByVal bit1 As Char, ByVal bit2 As Char) As Char
-        If bit1 = bit2 Then
-            Return "0"
-        Else
-            Return "1"
-        End If
+
+    Private Function CalcularGradoPolinomio(ByVal binario As String) As Integer
+        ' El grado del polinomio es igual a la posición del bit más significativo (contando desde 0)
+        ' Por lo tanto, el grado es igual a la longitud del binario menos 1
+        Return binario.Length - 1
     End Function
 
-    Private Function CambiarBit(ByVal cadena As String, ByVal indice As Integer, ByVal bit As Char) As String
-        Dim arreglo As Char() = cadena.ToCharArray()
-        arreglo(indice) = bit
-        Return New String(arreglo)
-    End Function
+
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        DataGridView1.Visible = True
-        Dim mensaje As String = TextBox5.Text
-        Dim polinomioGenerador As String = TextBox6.Text
-
-        If Not EsBinarioDe6Bits(mensaje) Then
-            MessageBox.Show("Por favor, ingrese un mensaje binario de máximo 6 bits.")
-            Return
+        ' Verificar si el contenido de TextBox5 es un número binario válido de máximo 10 bits y no es cero
+        If Not IsValidBinary(TextBox5.Text) Then
+            MessageBox.Show("Por favor, ingrese un número binario válido de máximo 10 bits en el primer cuadro de texto (TextBox5).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TextBox5.Focus() ' Colocar el foco en TextBox5
+            Return ' Salir del subprocedimiento
         End If
 
-        If Not EsBinarioDe6Bits(polinomioGenerador) Then
-            MessageBox.Show("Por favor, ingrese un polinomio generador binario de máximo 6 bits.")
-            Return
+        ' Verificar si el contenido de TextBox6 es un número binario válido de máximo 10 bits y no es cero
+        If Not IsValidBinary(TextBox6.Text) Then
+            MessageBox.Show("Por favor, ingrese un número binario válido de máximo 10 bits en el segundo cuadro de texto (TextBox6).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TextBox6.Focus() ' Colocar el foco en TextBox6
+            Return ' Salir del subprocedimiento
         End If
 
-        Dim mensajeExtendido As String = mensaje.PadRight(mensaje.Length + polinomioGenerador.Length - 1, "0")
-        Dim residuo As String = mensajeExtendido
-        Dim divisor As String = polinomioGenerador
 
-        Dim pasoAPaso As New List(Of String())
+        Dim gradoPolinomio As Integer = CalcularGradoPolinomio(TextBox6.Text)
 
-        For i As Integer = 0 To mensaje.Length - 1
-            If residuo(i) = "1" Then
-                Dim paso As String = residuo
-                For j As Integer = 0 To divisor.Length - 1
-                    residuo = CambiarBit(residuo, i + j, XorBit(residuo(i + j), divisor(j)))
-                Next
-                pasoAPaso.Add({paso, divisor.PadLeft(i, "0"c)})
-            End If
-        Next
+        ' Mostrar el grado del polinomio en el Label12
+        Label12.Text = gradoPolinomio
 
-        Dim resultado As String = residuo.Substring(mensaje.Length)
 
-        Dim pasoFinal As String = residuo
-        For i As Integer = 0 To polinomioGenerador.Length - 2
-            pasoFinal = CambiarBit(pasoFinal, mensaje.Length + i, "0"c)
-        Next
-        pasoAPaso.Add({pasoFinal, ""})
+        ' Polinomio generador
 
-        ' Llenar el DataGridView con los pasos y el resultado del CRC
-        DataGridView1.Rows.Clear()
-        DataGridView1.ColumnCount = 2
-        DataGridView1.Columns(0).Name = "Paso"
-        DataGridView1.Columns(1).Name = "Divisor"
-        For Each paso In pasoAPaso
-            DataGridView1.Rows.Add(paso)
-        Next
-        DataGridView1.Rows.Add({"Resultado", resultado})
+        Label13.Text = TextBox6.Text
+
+        Dim ceros As String = New String("0"c, gradoPolinomio)
+
+
+
+        Dim tA As String = TextBox5.Text + ceros
+
+
+
+        ' Trama + a (numero de ceros segun el grado)
+
+        Label14.Text = tA
+
+
+
+        ' Falta parte division --- continuar
+
+
+
+
+
+
+
+
     End Sub
 
-
-
-
+   
 End Class
 
 
-
+'datos de prueba informacion = 1011101001  polinomio 1101  --- corregir
