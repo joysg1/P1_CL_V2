@@ -1,0 +1,18 @@
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\bin\Debug\Parcial1_C_Logicos_Nelaton_Joy.exe
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\bin\Debug\Parcial1_C_Logicos_Nelaton_Joy.pdb
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\bin\Debug\Parcial1_C_Logicos_Nelaton_Joy.xml
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.Parcial_1.resources
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.Resources.resources
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.vbproj.GenerateResource.Cache
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.exe
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.xml
+C:\Users\USER\AppData\Local\Temporary Projects\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.pdb
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.exe
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.xml
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.pdb
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\bin\Debug\Parcial1_C_Logicos_Nelaton_Joy.exe
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\bin\Debug\Parcial1_C_Logicos_Nelaton_Joy.pdb
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\bin\Debug\Parcial1_C_Logicos_Nelaton_Joy.xml
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.Parcial_1.resources
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.Resources.resources
+z:\documentos\visual studio 2010\Projects\Parcial1_C_Logicos_Nelaton_Joy\Parcial1_C_Logicos_Nelaton_Joy\obj\x86\Debug\Parcial1_C_Logicos_Nelaton_Joy.vbproj.GenerateResource.Cache
