@@ -238,9 +238,50 @@
         Label14.Text = tA
 
 
+        Dim informacionBinario As String = Label14.Text
+        Dim polinomioGeneradorBinario As String = Label13.Text
+        Dim informacionDecimal As Integer = Convert.ToInt32(informacionBinario, 2)
+        Dim polinomioGeneradorDecimal As Integer = Convert.ToInt32(polinomioGeneradorBinario, 2)
 
-        ' Falta parte division --- continuar
+        ' Realizar la división decimal
+        Dim residuoDecimal As Integer = informacionDecimal Mod polinomioGeneradorDecimal
 
+        ' Convertir el residuo decimal a binario
+        Dim residuoBinario As String = Convert.ToString(residuoDecimal, 2)
+
+        ' Mostrar el residuo en el Label15
+        Label15.Text = residuoBinario
+
+
+
+        ' Segunda division (comprobacion)
+
+        Dim polSBin As String = TextBox6.Text
+        Label23.Text = polSBin
+
+      
+
+        Dim tSBin As String = TextBox5.Text & Label15.Text
+
+        Label24.Text = tSBin
+
+        Dim polSDec As Integer = Convert.ToInt32(polSBin, 2)
+        Dim tSDec As Integer = Convert.ToInt32(tSBin, 2)
+
+        Dim res2Dec As Integer = tSDec Mod polSDec
+
+        Dim res2Bin As String = Convert.ToString(res2Dec, 2)
+
+        Label25.Text = res2Bin
+
+
+        ' Validar R2
+
+        If res2Dec <> 0 Then
+            MessageBox.Show("El mensaje se ha enviado con errores")
+        ElseIf res2Dec = 0 Then
+            MessageBox.Show("El mensaje se ha enviado sin errores")
+        End If
 
 
 
@@ -250,8 +291,17 @@
 
     End Sub
 
+
    
+
+
+
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        TextBox2.Text = 0
+        TextBox3.Text = 0
+    End Sub
 End Class
 
 
-'datos de prueba informacion = 1011101001  polinomio 1101  --- corregir
+
